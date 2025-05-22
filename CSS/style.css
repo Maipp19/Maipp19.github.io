@@ -219,10 +219,6 @@ section .title span::after {
   object-fit: cover;
   object-position: top;
   border-radius: 12px;
-  mask-image: url('../asset/IMG/beans.svg');
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: 180%;
 }
 .about-details .right {
   width: 55%;
