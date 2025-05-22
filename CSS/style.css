@@ -217,7 +217,12 @@ section .title span::after {
   height: 350px;
   width: 350px;
   object-fit: cover;
+  object-position: top;
   border-radius: 12px;
+  mask-image: url('../asset/IMG/beans.svg');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 180%;
 }
 .about-details .right {
   width: 55%;
@@ -232,6 +237,22 @@ section .topic {
   text-align: justify;
   color: #0e2431;
 }
+
+.about-details .right .button {
+  outline: none;
+  padding: 5px 7px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  background: #4070f4;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  display: inline-block;
+  margin: 8px 0;
+}
+
 section .button {
   margin: 16px 0;
 }
@@ -432,6 +453,26 @@ section .button button:hover {
   margin: auto;
 }
 
+/* Achievement */
+.boxes-achievement {
+  column-count: 4;
+  column-gap: 20px;
+  margin-top: 30px;
+  padding: 20px 0;
+}
+
+.boxes-achievement img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: block;
+  break-inside: avoid;
+}
+
 /* Footer CSS */
 footer {
   background: rgba(64, 112, 244, 0.8);
@@ -480,6 +521,13 @@ footer .media-icons a {
 
 /* Responsive Media Query */
 
+@media (max-width: 1200px) {
+  .boxes-achievement {
+    column-count: 3;
+    column-gap: 18px;
+  }
+}
+
 @media (max-width: 1190px) {
   section .content {
     width: 85%;
@@ -517,6 +565,15 @@ footer .media-icons a {
 
   footer .media-icons {
     display: block;
+  }
+  
+  .boxes-achievement {
+    column-count: 2;
+    column-gap: 15px;
+  }
+  
+  .boxes-achievement img {
+    margin-bottom: 15px;
   }
 }
 
@@ -594,6 +651,19 @@ footer .media-icons a {
   }
 }
 
+@media (max-width: 600px) {
+  .boxes-achievement {
+    column-count: 2;
+    column-gap: 12px;
+    padding: 15px 0;
+  }
+  
+  .boxes-achievement img {
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+}
+
 @media (max-width: 500px) {
   .home .text-two {
     font-size: 55px;
@@ -604,5 +674,12 @@ footer .media-icons a {
   .skills-details .boxes .per {
     font-size: 50px;
     color: #4070f4;
+  }
+}
+
+@media (max-width: 400px) {
+  .boxes-achievement {
+    column-count: 1;
+    column-gap: 0;
   }
 }
